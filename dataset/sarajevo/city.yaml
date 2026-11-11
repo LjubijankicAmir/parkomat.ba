@@ -1,0 +1,45 @@
+# Sarajevo: the city itself. Zones live in zones.yaml, curated garages and
+# lots in places.yaml; everything else comes from OpenStreetMap.
+id: sarajevo
+name: Sarajevo
+operator: KJKP Rad
+# minLon, minLat, maxLon, maxLat: the area searched in OpenStreetMap.
+bbox: [18.33, 43.83, 18.45, 43.88]
+# The design's default camera.
+camera:
+  lat: 43.8563
+  lon: 18.4131
+  zoom: 16
+  pitch: 56
+  bearing: -24
+
+# Days zones don't charge: public holidays and the first day of religious
+# holidays (KJKP Rad, "Javna parkirališta i garaže").
+holidays:
+  source: https://rad.com.ba/usluge/javna-parkiralista-i-garaze
+  # Bajram dates follow the moon; check them against the official calendar.
+  verifiedAt: null
+  dates:
+    - 2026-01-01 # Nova godina
+    - 2026-01-02
+    - 2026-01-07 # Božić (pravoslavni)
+    - 2026-03-01 # Dan nezavisnosti
+    - 2026-03-20 # Ramazanski bajram
+    - 2026-04-05 # Uskrs (katolički)
+    - 2026-04-12 # Uskrs (pravoslavni)
+    - 2026-05-01 # Praznik rada
+    - 2026-05-02
+    - 2026-05-27 # Kurban-bajram
+    - 2026-11-25 # Dan državnosti
+    - 2026-12-25 # Božić (katolički)
+    - 2027-01-01
+    - 2027-01-02
+    - 2027-01-07
+    - 2027-03-01
+    - 2027-03-10 # Ramazanski bajram
+    - 2027-03-28
+    - 2027-05-01
+    - 2027-05-02
+    - 2027-05-16 # Kurban-bajram
+    - 2027-11-25
+    - 2027-12-25

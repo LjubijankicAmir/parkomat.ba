@@ -1,0 +1,80 @@
+# Garages and lots with details OpenStreetMap doesn't have: prices, hours,
+# capacity, entrance height. Each one points at its OpenStreetMap feature
+# (n = node, w = way, r = relation), whose shape and position the build uses;
+# the values here win over OpenStreetMap's tags.
+#
+# Every other public parking feature in OpenStreetMap is added as it is,
+# without prices.
+#
+# Money is in KM. `null` means unknown: the app says so rather than guessing.
+
+places:
+  - osm: w112390399
+    name: Sarajevo City Center
+    type: underground
+    capacity: 1100
+    levels: 4
+    maxHeightCm: null
+    customersOnly: false
+    openingHours:
+      - days: [mon, tue, wed, thu, fri, sat, sun]
+        from: "00:00"
+        to: "24:00"
+    tariff:
+      freeMinutes: 15
+      dailyTicket: 30.00
+      rates:
+        - days: [mon, tue, wed, thu, fri, sat, sun]
+          from: "08:00"
+          to: "22:00"
+          firstHour: 3.00
+          perHour: 2.00
+        - days: [mon, tue, wed, thu, fri, sat, sun]
+          from: "22:00"
+          to: "08:00"
+          perHour: 1.00
+    # The page is several years old; prices may have changed.
+    sources:
+      - https://scc.ba/bs/parking.html
+    verifiedAt: null
+
+  - osm: n4806292157
+    name: ARIA Centar
+    type: underground
+    capacity: 469
+    levels: 3
+    maxHeightCm: null
+    customersOnly: false
+    openingHours: null
+    tariff: null
+    sources:
+      - https://en.wikipedia.org/wiki/ARIA_Centar
+    verifiedAt: null
+
+  - osm: w118942246
+    name: Alta Shopping Center
+    type: underground
+    capacity: null
+    levels: null
+    maxHeightCm: null
+    customersOnly: false
+    openingHours: null
+    tariff: null
+    sources: []
+    verifiedAt: null
+
+  - osm: n7831375039
+    name: Garaža Vijećnica
+    type: underground
+    capacity: 155
+    levels: null
+    maxHeightCm: null
+    customersOnly: false
+    openingHours:
+      - days: [mon, tue, wed, thu, fri, sat, sun]
+        from: "00:00"
+        to: "24:00"
+    tariff: null
+    sources:
+      - https://www.openstreetmap.org/node/7831375039
+    verifiedAt: null
