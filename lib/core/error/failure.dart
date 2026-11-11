@@ -11,6 +11,9 @@ sealed class Failure with _$Failure {
   /// The requested record does not exist.
   const factory Failure.notFound([String? message]) = NotFoundFailure;
 
+  /// Bundled or downloaded data couldn't be read.
+  const factory Failure.data([String? message]) = DataFailure;
+
   /// Input broke a domain rule, e.g. a plate with a letter BiH plates don't
   /// use.
   const factory Failure.validation([String? message]) = ValidationFailure;
