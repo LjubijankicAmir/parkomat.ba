@@ -31,6 +31,10 @@ Parking in Sarajevo is split between street zones paid by SMS, shopping-centre a
 - **Light and dark themes**, designed as equals
 - **A web app** for browsing parking from any browser
 
+## Download
+
+Android APKs are attached to each [release](https://github.com/LjubijankicAmir/parkomat.ba/releases). Install the latest one on your phone to try the app.
+
 ## Roadmap
 
 | Phase | Scope | Release |
