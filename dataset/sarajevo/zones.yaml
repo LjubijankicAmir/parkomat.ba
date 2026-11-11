@@ -1,0 +1,123 @@
+# Sarajevo's paid street-parking zones, run by KJKP Rad.
+#
+# Each zone lists its parking stretches as they appear in the official list
+# (parking-sarajevo.ba, "Popis ulica po zonama"). A stretch is either:
+#   - a street: drawn as zone lines over the OpenStreetMap ways with that
+#     name. `near` limits it to the ways around a point, for stretches that
+#     are only part of a long street (or named after a landmark);
+#   - a lot: a ramp-controlled lot, matched to the closest OpenStreetMap
+#     parking area around `near`. Lots charge around the clock.
+#
+# A street over 800 m long with no `near` isn't drawn, because the paid part
+# is unknown; the build lists it so someone can add an anchor.
+#
+# `verifiedAt` stays null until someone has checked the values on the street.
+
+zones:
+  - id: sarajevo-1
+    number: 1
+    name: Zona I
+    sms:
+      number: "0832001"
+    pricePerHour: 3.00
+    dailyTicket: 30.00
+    # Monday to Saturday; Sundays and holidays are free.
+    paidHours:
+      - days: [mon, tue, wed, thu, fri, sat]
+        from: "07:00"
+        to: "22:00"
+    maxStayMinutes: null
+    sources:
+      - https://rad.com.ba/usluge/javna-parkiralista-i-garaze
+      - https://rad.com.ba/aktuelnosti/211/odluka-o-cijenama-koristenja-javnih-parkinga
+      - https://parking-sarajevo.ba/javni-parkinzi/popis-ulica-po-zonama.html
+    verifiedAt: null
+    stretches:
+      - { name: Alipašina, spaces: 35 }
+      - { name: Bistrik II, osmName: Bistrik, spaces: 16 }
+      - { name: Branilaca Sarajeva, spaces: 35 }
+      - { name: Brodac, spaces: 23 }
+      - { name: Buka, spaces: 26 }
+      - { name: Ćemaluša, spaces: 6 }
+      - { name: Danijela Ozme, spaces: 38 }
+      - { name: Despićeva, spaces: 7 }
+      - { name: Dženetića čikma, spaces: 26 }
+      - { name: Džidžikovac, spaces: 26 }
+      - { name: Hadžiristića, spaces: 13 }
+      - { name: Hamdije Kreševljakovića, spaces: 27 }
+      - { name: Kaptol, spaces: 10 }
+      - { name: Mehmeda Spahe, spaces: 27 }
+      - { name: Mis Irbina, spaces: 75 }
+      - { name: Musala, spaces: 43 }
+      - { name: Obala Isa-bega Isakovića, spaces: 21 }
+      - name: Obala Kulina bana (Pozorište)
+        osmName: Obala Kulina bana
+        spaces: 25
+        near: { lat: 43.85687, lon: 18.42073, radius: 200 } # Narodno pozorište
+      - name: Obala Kulina bana (Vijećnica)
+        osmName: Obala Kulina bana
+        spaces: 28
+        near: { lat: 43.85917, lon: 18.43338, radius: 200 } # Vijećnica
+      - { name: Petrakijina, spaces: 42 }
+      - { name: Reisa Džemaludina Čauševića, spaces: 18 }
+      - name: Skenderija (rampa)
+        kind: lot
+        spaces: 48
+        near: { lat: 43.85506, lon: 18.41386, radius: 250 } # Centar Skenderija
+      - name: Skenderija most
+        osmName: Skenderija most
+        spaces: 27
+      - { name: Tina Ujevića, spaces: 40 }
+      - { name: Valtera Perića, osmName: Vladimira Valtera Perića, spaces: 28 }
+      - { name: Zelenih beretki, spaces: 8 }
+
+  - id: sarajevo-2
+    number: 2
+    name: Zona II
+    sms:
+      number: "0832002"
+    pricePerHour: 2.00
+    dailyTicket: 15.00
+    paidHours:
+      - days: [mon, tue, wed, thu, fri, sat]
+        from: "07:00"
+        to: "20:00"
+    maxStayMinutes: null
+    sources:
+      - https://rad.com.ba/usluge/javna-parkiralista-i-garaze
+      - https://rad.com.ba/aktuelnosti/211/odluka-o-cijenama-koristenja-javnih-parkinga
+      - https://parking-sarajevo.ba/javni-parkinzi/popis-ulica-po-zonama.html
+    verifiedAt: null
+    stretches:
+      - { name: Augusta Brauna, spaces: 11 }
+      - name: Autobusna stanica Pošta
+        kind: lot
+        spaces: 45
+        near: { lat: 43.85881, lon: 18.39688, radius: 250 } # Autobuska stanica
+      - name: Dolac Malta Pošta (rampa)
+        kind: lot
+        spaces: 60
+        near: { lat: 43.85154, lon: 18.37916, radius: 250 } # Dolac Malta
+      - { name: Dolina, spaces: 35 }
+      - { name: Džemala Bijedića, spaces: 46 }
+      - { name: Franca Lehara, spaces: 82 }
+      - { name: Franje Račkog, spaces: 64 }
+      - { name: Hazima Šabanovića, spaces: 35 }
+      - { name: Herceg Stjepana, osmName: Hercega Stjepana, spaces: 10 }
+      - { name: Koste Hermana, spaces: 61 }
+      - { name: Kotromanića, spaces: 46 }
+      - { name: Kralja Tvrtka, spaces: 114 }
+      - { name: Marcela Šnajdera, spaces: 35 }
+      - name: Most Suade Dilberović (rampa)
+        kind: lot
+        spaces: 300
+        near: { lat: 43.8533, lon: 18.40654, radius: 250 } # Most Suade Dilberović
+      - name: Muzej
+        osmName: Zmaja od Bosne
+        spaces: 90
+        near: { lat: 43.85448, lon: 18.40271, radius: 200 } # Zemaljski muzej
+      - { name: Stjepana Tomića, spaces: 64 }
+      - name: Željeznička stanica
+        kind: lot
+        spaces: 70
+        near: { lat: 43.86022, lon: 18.39909, radius: 250 } # Željeznička stanica
