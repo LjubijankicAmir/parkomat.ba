@@ -39,7 +39,7 @@ jobs:
       # A tag never releases code that wouldn't pass CI.
       - name: Check formatting, analyze and test
         run: |
-          dart format --output=none --set-exit-if-changed lib test
+          dart format --output=none --set-exit-if-changed lib test tool
           flutter analyze --fatal-infos
           flutter test
 
