@@ -1,0 +1,18 @@
+flutter_launcher_icons:
+  image_path: assets/app_icon/parkomat-ios-1024.png
+
+  ios: true
+  remove_alpha_ios: true
+
+  android: true
+  adaptive_icon_background: "#0E1630"
+  adaptive_icon_foreground: assets/app_icon/parkomat-android-foreground-1024.png
+  adaptive_icon_monochrome: assets/app_icon/parkomat-android-monochrome-1024.png
+  # The foreground is already drawn for the 108dp canvas with a 66dp safe zone.
+  adaptive_icon_foreground_inset: 0
+
+  web:
+    generate: true
+    image_path: assets/app_icon/parkomat-ios-1024.png
+    background_color: "#0E1630"
+    theme_color: "#0E1630"

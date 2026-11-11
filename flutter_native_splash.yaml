@@ -1,0 +1,14 @@
+flutter_native_splash:
+  # The icon tile above the wordmark, as in the design's splash screens.
+  # 4x density: 965px wide = 241pt on screen.
+  color: "#EEF1F7"
+  image: assets/splash/parkomat-splash-light.png
+  color_dark: "#0E1630"
+  image_dark: assets/splash/parkomat-splash-dark.png
+
+  # Android 12+ splash API: the adaptive icon foreground on brand-night in
+  # both themes. 1152px canvas, content inside the 768px safe circle.
+  android_12:
+    color: "#0E1630"
+    color_dark: "#0E1630"
+    image: assets/splash/parkomat-splash-android12.png

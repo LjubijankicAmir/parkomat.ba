@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Parkomat.ba (debug)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "debug"
+    },
+    {
+      "name": "Parkomat.ba (profile)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "Parkomat.ba (release)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    }
+  ]
+}
