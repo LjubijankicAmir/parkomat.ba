@@ -99,6 +99,15 @@ flutter test
 
 On the web, the database runs SQLite as WebAssembly. `web/sqlite3.wasm` and `web/drift_worker.js` come from the [drift release](https://github.com/simolus3/drift/releases) that matches the locked `drift` version; update them together when drift is upgraded.
 
+## Data
+
+The app bundles each city's parking data, so it works offline from the first launch. The data is built from two sources:
+
+- **Hand-written YAML** in [`dataset/`](dataset/README.md): the paid zones with their SMS numbers, prices and paid hours, and the garages whose prices and hours OpenStreetMap doesn't have. Every value names its source.
+- **[OpenStreetMap](https://www.openstreetmap.org)**: the zone streets' shapes and every public parking area in the city.
+
+`dart run tool/build_dataset.dart sarajevo` joins the two into `assets/data/sarajevo.json` and writes a report of anything still to resolve or verify.
+
 ## Contributing
 
 Work happens on feature branches that are squash-merged into `main` through pull requests. Commit messages and PR titles follow [Conventional Commits](https://www.conventionalcommits.org/) (`feat(map): show garages as 3D extrusions`), and CI checks formatting, analysis, tests, an Android build and a web build on every PR.
@@ -108,3 +117,5 @@ Work happens on feature branches that are squash-merged into `main` through pull
 The source code is available under the [MIT License](LICENSE).
 
 The Parkomat.ba name, the logo, the app icon and the splash artwork are not covered by that license. Please don't use them in your own published apps. The bundled fonts, [Bricolage Grotesque](assets/fonts/BricolageGrotesque-OFL.txt) and [Onest](assets/fonts/Onest-OFL.txt), are licensed under the SIL Open Font License 1.1.
+
+The parking data in `dataset/` and `assets/data/` is available under the [Open Database License](https://opendatacommons.org/licenses/odbl/1-0/). It contains information from OpenStreetMap, © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright).
